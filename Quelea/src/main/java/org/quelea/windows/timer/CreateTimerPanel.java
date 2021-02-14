@@ -131,6 +131,9 @@ public class CreateTimerPanel extends Stage {
         textTextArea.setPrefRowCount(4);
         textTextArea.setPrefColumnCount(30);
         textTextArea.setPromptText(LabelGrabber.INSTANCE.getLabel("timer.text.prompt"));
+        if (QueleaProperties.get().getUseDarkTheme()) {
+            textTextArea.setStyle("-fx-prompt-text-fill: #404040;");
+        }
         textLabel.setLabelFor(textTextArea);
         GridPane.setConstraints(textTextArea, 1, rows);
         grid.getChildren().add(textTextArea);
